@@ -21,13 +21,13 @@ export default function Home() {
         <Hero />
         <About />
         <ProductProfile />
+        <Gallery />
+        <Applications />
         <DesignDevelopment />
         <Manufacturing />
         <Quality />
         <BeeRating />
-        <Applications />
         <WhyUs />
-        <Gallery />
         <Contact />
       </main>
       <Footer />

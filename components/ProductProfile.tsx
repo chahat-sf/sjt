@@ -13,7 +13,7 @@ export default function ProductProfile() {
   return (
     <section
       id="products"
-      className="py-28 linear-gradient(90deg, #2FB7B3, #0B5ED7"
+      className="py-28 linear-gradient(90deg, #2FB7B3, #0B5ED7 px-2"
   style={{
         background: "linear-gradient(90deg, #2FB7B3, #0B5ED7)",
       }}    >

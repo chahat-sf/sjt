@@ -6,10 +6,10 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-24"
+      className="py-24 "
       style={{ backgroundColor: "#F6F8E8" }}
     >
-      <div className="container grid md:grid-cols-2 gap-14 items-start mx-auto">
+      <div className="container grid md:grid-cols-2 gap-14 items-start mx-auto px-2">
 
         {/* LEFT CONTENT */}
         <motion.div

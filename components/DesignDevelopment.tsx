@@ -16,7 +16,7 @@ export default function DesignDevelopment() {
       className="py-28"
       style={{ backgroundColor: "#F9FAFB" }}
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto px-2">
 
         {/* Heading */}
         <motion.h2

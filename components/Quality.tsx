@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const tests = [
   "Insulation Resistance Test",
@@ -20,7 +21,7 @@ export default function Quality() {
       className="py-28"
       style={{ backgroundColor: "#F6F8E8" }}
     >
-      <div className="container mx-auto grid md:grid-cols-2 gap-14 items-start">
+      <div className="container px-2 mx-auto grid md:grid-cols-2 gap-14 items-start">
 
         {/* LEFT: TEST LIST */}
         <motion.div
@@ -90,14 +91,14 @@ export default function Quality() {
             international standards as applicable.
           </p>
 
-          {/* LOGOS */}
+          {/* CERTIFICATION LOGOS */}
           <div className="mt-6 grid grid-cols-3 gap-4">
-            <LogoBox label="ISO" />
-            <LogoBox label="BEE" />
-            <LogoBox label="URS" />
+            <LogoBox label="ISO 9001:2008" src="/img/iso.png" />
+            <LogoBox label="BEE Rated" src="/img/beelogo.jpeg" />
+            <LogoBox label="URS" src="/img/urslogo.webp" />
           </div>
 
-          {/* POLICY */}
+          {/* QUALITY POLICY */}
           <div
             className="mt-8 rounded-2xl p-5"
             style={{
@@ -162,19 +163,31 @@ function TestItem({ text }: { text: string }) {
   );
 }
 
-function LogoBox({ label }: { label: string }) {
+function LogoBox({
+  label,
+  src,
+}: {
+  label: string;
+  src: string;
+}) {
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
-      className="aspect-square rounded-2xl grid place-items-center font-semibold"
+      className="aspect-square rounded-2xl grid place-items-center overflow-hidden"
       style={{
         backgroundColor: "#FFFFFF",
         border: "1px solid #E5E7EB",
-        color: "#6B7280",
       }}
+      title={label}
     >
-      {label} LOGO
+      <Image
+        src={src}
+        alt={`${label} certification logo`}
+        width={220}
+        height={220}
+        className="w-full h-full object-contain p-4"
+      />
     </motion.div>
   );
 }

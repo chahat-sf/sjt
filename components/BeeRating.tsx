@@ -52,36 +52,38 @@ export default function BeeRating() {
         </motion.div>
 
         {/* RIGHT VISUAL */}
-        <motion.div
-          initial={{ x: 60, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1.2, ease: "easeInOut", delay: 0.2 }}
-          viewport={{ once: true }}
-          className="relative rounded-3xl p-8"
-          style={{
-            background:
-              "linear-gradient(135deg, rgba(11,94,215,0.10), rgba(47,183,179,0.12))",
-            border: "1px solid #E5E7EB",
-          }}
-        >
-          {/* Floating effect */}
-          <motion.div
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-            className="aspect-[4/3] rounded-2xl grid place-items-center"
-            style={{
-              backgroundColor: "#FFFFFF",
-              border: "1px solid #E5E7EB",
-            }}
-          >
-            <span
-              className="text-lg font-semibold"
-              style={{ color: "#6B7280" }}
-            >
-              BEE Label Placeholder
-            </span>
-          </motion.div>
-        </motion.div>
+      {/* RIGHT VISUAL */}
+<motion.div
+  initial={{ x: 60, opacity: 0 }}
+  whileInView={{ x: 0, opacity: 1 }}
+  transition={{ duration: 1.2, ease: "easeInOut", delay: 0.2 }}
+  viewport={{ once: true }}
+  className="relative rounded-3xl p-8 overflow-hidden"
+  // style={{
+  //   background:
+  //     "linear-gradient(135deg, rgba(11,94,215,0.10), rgba(47,183,179,0.12))",
+  //   border: "1px solid #E5E7EB",
+  // }}
+>
+  {/* Floating effect */}
+  <motion.div
+    animate={{ y: [0, -12, 0] }}
+    transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+    className="aspect-[4/3]  flex items-center justify-center p-6"
+    // style={{
+    //   backgroundColor: "#FFFFFF",
+    //   border: "1px solid #E5E7EB",
+    //   boxShadow: "0 20px 40px rgba(0,0,0,0.08)",
+    // }}
+  >
+    <img
+      src="/img/starrating.jpg"
+      alt="BEE Star Rating certification for energy efficient transformers"
+      className="max-h-full max-w-full object-contain"
+    />
+  </motion.div>
+</motion.div>
+
 
       </div>
     </section>

@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="pt-32 min-h-[100vh] flex items-center relative overflow-hidden"
+      className="pt-32 min-h-[100vh] flex items-center relative overflow-hidden px-2"
     >
       {/* Background Image */}
       <motion.div
@@ -18,7 +18,7 @@ export default function Hero() {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-sjt-cream/90 to-sjt-teal/60" />
+      <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/50 to-sjt-teal/60" />
 
       {/* Content */}
       <div className="relative z-10 container grid md:grid-cols-2 gap-10 items-center mx-auto">
@@ -44,18 +44,18 @@ export default function Hero() {
             initial={{ y: 26, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.65, duration: 1.4, ease: "easeInOut" }}
-            className="mt-4 text-4xl md:text-5xl font-bold leading-tight"
+            className="mt-4 text-xl md:text-5xl font-bold leading-tight text-white"
           >
             Manufacturing & Repairing of{" "}
-            <span className="text-white">Power</span> &{" "}
-            <span className="text-white">Distribution</span> Transformers
+            <span className="text-yellow-400">Power</span> &{" "}
+            <span className="text-yellow-400">Distribution</span> Transformers
           </motion.h1>
 
           <motion.p
             initial={{ y: 26, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.85, duration: 1.3, ease: "easeInOut" }}
-            className="mt-4 text-sjt-grey max-w-xl"
+            className="mt-4 text-gray-300 max-w-xl"
           >
             All types of transformer manufacturing, winding works, testing and
             repair services—built for reliability, efficiency and compliance.
@@ -67,15 +67,15 @@ export default function Hero() {
             transition={{ delay: 1.05, duration: 1.2, ease: "easeInOut" }}
             className="mt-7 flex flex-wrap gap-3"
           >
-            <a
+            {/* <a
               href="#products"
               className="bg-sjt-teal text-white px-6 py-3 rounded font-semibold hover:opacity-90"
             >
               View Products
-            </a>
+            </a> */}
             <a
               href="#process"
-              className="border border-sjt-teal text-sjt-teal px-6 py-3 rounded font-semibold hover:bg-white"
+              className=" group border-sjt-teal text-sjt-teal px-6 py-3 rounded-xl font-semibold bg-white hover:scale-105 duration-300 ease-in-out"
             >
               Manufacturing Process
             </a>
@@ -112,12 +112,12 @@ export default function Hero() {
               duration: 10,
               ease: "easeInOut",
             }}
-            className="rounded-2xl overflow-hidden shadow-xl"
+            className="rounded-2xl overflow-hidden "
           >
             <img
-              src="/img/trans.jpeg"
+              src="/img/trans1.png"
               alt="Transformer"
-              className="w-full h-full object-cover rounded-2xl"
+              className="w-full h-full object-cover rounded-2xl "
             />
           </motion.div>
         </motion.div>
@@ -135,7 +135,7 @@ function Stat({ title, sub }: { title: string; sub: string }) {
         visible: { y: 0, opacity: 1 },
       }}
       transition={{ duration: 1.1, ease: "easeInOut" }}
-      className="rounded-xl bg-white/80 hover:shadow-2xl border p-3 backdrop-blur"
+      className="rounded-xl bg-white/80 hover:shadow-lg shadow-gray-300 border p-3 backdrop-blur"
     >
       <div className="font-bold">{title}</div>
       <div className="text-xs text-sjt-grey">{sub}</div>

@@ -18,7 +18,7 @@ export default function WhyUs() {
         background: "linear-gradient(90deg, #2FB7B3, #0B5ED7)",
       }}
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto px-2">
 
         {/* Heading */}
         <motion.h2

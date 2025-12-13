@@ -9,7 +9,14 @@ export default function Contact() {
       className="py-28"
       style={{ backgroundColor: "#F6F8E8" }}
     >
-      <div className="container mx-auto grid md:grid-cols-2 gap-16 items-start">
+         <h2
+            className="font-bold text-4xl md:text-5xl text-center mb-6"
+            style={{ color: "#1F2937" }}
+          >
+            Contact Us
+          </h2>
+
+      <div className="container mx-auto grid md:grid-cols-2 gap-16 items-start px-2">
 
         {/* LEFT: CONTACT INFO */}
         <motion.div
@@ -18,26 +25,25 @@ export default function Contact() {
           transition={{ duration: 1.2, ease: "easeInOut" }}
           viewport={{ once: true }}
         >
-          <h2
-            className="font-bold text-4xl md:text-5xl"
-            style={{ color: "#1F2937" }}
-          >
-            Contact Us
-          </h2>
-
-          <p
+       
+          {/* <p
             className="mt-5 text-lg md:text-xl max-w-xl"
             style={{ color: "#6B7280" }}
           >
             Share your requirement and our technical team will get back with
             specifications, timelines, and a competitive quotation.
-          </p>
+          </p> */}
 
           {/* INFO LIST */}
-          <div className="mt-8 space-y-5 text-base md:text-lg">
-            <Info label="Address" value="(Add full address as per brochure)" />
-            <Info label="Phone" value="+91 XXXXX XXXXX" />
-            <Info label="Email" value="yourmail@example.com" />
+          <div className="mt-4 space-y-5 text-base md:text-lg">
+            <Info label="Address" value="Plot No. 198, A.P.J. Kalam Green Industrial Park (A-GRIP)
+Entrepreneurs of India (ALEAP-INDIA)
+Village: Nandigama
+Mandal: Patancheru
+District: Sangareddy
+Telangana – 500090, India" />
+            <Info label="Phone" value="+91 99492 65499 , +91 73374 46699" />
+            <Info label="Email" value="shrijagadambatransformers@gmail.com" />
           </div>
 
           {/* MAP */}
@@ -52,9 +58,18 @@ export default function Contact() {
             <div className="font-semibold mb-2" style={{ color: "#0B5ED7" }}>
               Location
             </div>
-            <div className="rounded-2xl bg-gray-100 p-6 text-sm text-center">
-              Google Map Placeholder (Embed Map Here)
-            </div>
+    <div className="rounded-2xl bg-gray-100 p-2 overflow-hidden">
+  <div className="relative w-full h-[300px] md:h-[360px] rounded-xl overflow-hidden">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15220.581570319015!2d78.17122618155716!3d17.50057162697333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbf1e2e38b7ebd%3A0x7cac81e6e62a3f64!2sALEAP%20Green%20Industrial%20Park!5e0!3m2!1sen!2sin!4v1765609582649!5m2!1sen!2sin"
+      className="absolute inset-0 w-full h-full border-0"
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      allowFullScreen
+    />
+  </div>
+</div>
+
           </div>
         </motion.div>
 
