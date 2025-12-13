@@ -15,7 +15,7 @@ import WhyUs from "@/components/WhyUs";
 
 export default function Home() {
   return (
-    <>
+    <div className="max-w-[100wv] overflow-hidden">
       <Header />
       <main>
         <Hero />
@@ -31,6 +31,6 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

@@ -69,7 +69,7 @@ export default function BeeRating() {
   <motion.div
     animate={{ y: [0, -12, 0] }}
     transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-    className="aspect-[4/3]  flex items-center justify-center p-6"
+    className="aspect-[4/3]  flex items-center justify-center "
     // style={{
     //   backgroundColor: "#FFFFFF",
     //   border: "1px solid #E5E7EB",
@@ -77,9 +77,9 @@ export default function BeeRating() {
     // }}
   >
     <img
-      src="/img/starrating.jpg"
+      src="/img/star2.png"
       alt="BEE Star Rating certification for energy efficient transformers"
-      className="max-h-full max-w-full object-contain"
+      className="max-h-full max-w-full object-cover object-center scale-110"
     />
   </motion.div>
 </motion.div>

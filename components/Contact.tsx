@@ -176,7 +176,7 @@ District: Sangareddy, Telangana – 500090`}
 
 function Info({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex gap-4">
+    <div className="flex flex-col md:flex-row gap-4">
       <div className="w-28 font-semibold text-[#0B5ED7]">
         {label}
       </div>

@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-24 "
+      className="py-20 "
       style={{ backgroundColor: "#F6F8E8" }}
     >
       <div className="container grid md:grid-cols-2 gap-14 items-start mx-auto px-2">

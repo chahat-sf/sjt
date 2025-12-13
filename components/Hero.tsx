@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/50 to-sjt-teal/60" />
 
       {/* Content */}
-      <div className="relative z-10 container grid md:grid-cols-2 gap-10 items-center mx-auto">
+      <div className="relative py-10 z-10 container grid md:grid-cols-2 gap-10  items-center text-center md:text-left mx-auto">
 
         {/* LEFT CONTENT */}
         <motion.div
@@ -44,7 +44,7 @@ export default function Hero() {
             initial={{ y: 26, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.65, duration: 1.4, ease: "easeInOut" }}
-            className="mt-4 text-xl md:text-5xl font-bold leading-tight text-white"
+            className="mt-4 text-2xl md:text-5xl font-bold leading-tight text-white"
           >
             Manufacturing & Repairing of{" "}
             <span className="text-yellow-400">Power</span> &{" "}
@@ -75,7 +75,7 @@ export default function Hero() {
             </a> */}
             <a
               href="#process"
-              className=" group border-sjt-teal text-sjt-teal px-6 py-3 rounded-xl font-semibold bg-white hover:scale-105 duration-300 ease-in-out"
+              className=" mx-auto md:mx-0 group border-sjt-teal text-sjt-teal px-6 py-3 rounded-xl font-semibold bg-white hover:scale-105 duration-300 ease-in-out"
             >
               Manufacturing Process
             </a>
