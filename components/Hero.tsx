@@ -115,7 +115,7 @@ export default function Hero() {
             className="rounded-2xl overflow-hidden "
           >
             <img
-              src="/img/trans1.png"
+              src="/img/trans2.png"
               alt="Transformer"
               className="w-full h-full object-cover rounded-2xl "
             />

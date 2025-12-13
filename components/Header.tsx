@@ -11,7 +11,7 @@ const links = [
   { href: "design", label: "R&D" },
   { href: "process", label: "Process" },
   { href: "quality", label: "Quality" },
-  { href: "contact", label: "Contact" },
+  // { href: "contact", label: "Contact" },
 ];
 
 export default function Header() {
@@ -69,7 +69,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur shadow-sm">
-      <div className="container mx-auto px-3">
+      <div className="flex-container mx-auto px-3 md:px-10">
         <div className="flex items-center justify-between h-[88px]">
 
           {/* LOGO */}
@@ -105,7 +105,7 @@ export default function Header() {
                          bg-black px-6 py-3 text-base font-semibold text-white
                          shadow-lg hover:shadow-xl transition"
             >
-              Request Quote
+            Contact Us
               <span className="transition-transform group-hover:translate-x-1">
                 →
               </span>
