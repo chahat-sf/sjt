@@ -12,8 +12,10 @@
     "framer-motion": "^12.23.26",
     "lucide-react": "^0.561.0",
     "next": "16.0.10",
-    "react": "19.2.1",
-    "react-dom": "19.2.1"
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-server-dom-parcel": "^19.2.3",
+    "react-server-dom-webpack": "^19.2.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

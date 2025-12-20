@@ -135,8 +135,7 @@ export default function Header() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="mt-4 inline-flex w-full items-center justify-center gap-2
-                       rounded-full bg-black px-6 py-3 text-lg font-semibold text-white"
+            className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-black px-6 py-3 text-lg font-semibold text-white"
           >
             Request Quote →
           </a>
