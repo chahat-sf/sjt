@@ -1,0 +1,30 @@
+project:
+  git_repository: "https://github.com/Acolytetech/sjt.git"
+
+  deploy:
+    directory: "/home/shrijagadambatransformers/htdocs/www.shrijagadambatransformers.com"
+    shared_directories: []
+
+    before_commands:
+      - "cd {release_directory} && npm ci"
+      - "cd {release_directory} && npm run build"
+      - >
+        cd {release_directory} &&
+        rm -rf .deploy_runtime &&
+        mkdir -p .deploy_runtime &&
+        cp -a .next .deploy_runtime/.next &&
+        cp -a node_modules .deploy_runtime/node_modules &&
+        cp -a package.json .deploy_runtime/package.json &&
+        cp -a next.config.* .deploy_runtime/ 2>/dev/null || true &&
+        cp -a public .deploy_runtime/public &&
+        find . -mindepth 1 -maxdepth 1 ! -name ".deploy_runtime" -exec rm -rf {} \; &&
+        cp -a .deploy_runtime/. . &&
+        rm -rf .deploy_runtime
+      - "find {release_directory} -type d -exec chmod 0770 {} \\; && find {release_directory} -type f -exec chmod 0660 {} \\;"
+
+    after_commands:
+      - >
+        cd /home/shrijagadambatransformers/htdocs/www.shrijagadambatransformers.com/current &&
+        PORT=3009 pm2 start npm --name "sjt-app" -- start -- -p 3009 --hostname 0.0.0.0 ||
+        pm2 restart "sjt-app" --update-env
+      - "pm2 save"
