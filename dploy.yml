@@ -1,13 +1,13 @@
 project:
-  git_repository: "https://github.com/Acolytetech/sjt.git"
+  git_repository: 'https://github.com/Acolytetech/sjt.git'
 
   deploy:
-    directory: "/home/shrijagadambatransformers/htdocs/www.shrijagadambatransformers.com"
+    directory: '/home/shrijagadambatransformers/htdocs/www.shrijagadambatransformers.com'
     shared_directories: []
 
     before_commands:
-      - "cd {release_directory} && npm ci"
-      - "cd {release_directory} && npm run build"
+      - 'cd {release_directory} && npm ci'
+      - 'cd {release_directory} && npm run build'
       - >
         cd {release_directory} &&
         rm -rf .deploy_runtime &&
@@ -19,12 +19,10 @@ project:
         cp -a public .deploy_runtime/public &&
         find . -mindepth 1 -maxdepth 1 ! -name ".deploy_runtime" -exec rm -rf {} \; &&
         cp -a .deploy_runtime/. . &&
-        rm -rf .deploy_runtime
-      - "find {release_directory} -type d -exec chmod 0770 {} \\; && find {release_directory} -type f -exec chmod 0660 {} \\;"
+        rm -rf .deploy_runtime &&
+        chmod -R +x node_modules/.bin node_modules/next/dist/bin 2>/dev/null || true
 
     after_commands:
-      - >
-        cd /home/shrijagadambatransformers/htdocs/www.shrijagadambatransformers.com/current &&
-        PORT=3009 pm2 start npm --name "sjt-app" -- start -- -p 3009 --hostname 0.0.0.0 ||
-        pm2 restart "sjt-app" --update-env
-      - "pm2 save"
+      - "pm2 restart 'sjt-app' --update-env || pm2 start npm --name 'sjt-app' --cwd {release_directory} -- start -- -p 3009 --hostname 0.0.0.0"
+      - 'pm2 save'
+      
