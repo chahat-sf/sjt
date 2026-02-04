@@ -126,7 +126,7 @@ export default function Header() {
       {/* MOBILE MENU */}
       <div
         className={`lg:hidden overflow-hidden transition-all duration-300
-          ${open ? "max-h-[420px] border-t" : "max-h-0"}
+          ${open ? "max-h-[550px] border-t" : "max-h-0"}
         `}
       >
         <div className="container mx-auto px-4 py-4 space-y-3 bg-white">
